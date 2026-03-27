@@ -1,0 +1,3 @@
+{
+  "/client/[subdomain]/page": "app/client/[subdomain]/page.js"
+}
