@@ -104,7 +104,7 @@ export default function HomePage() {
                 </div>
                 <div className="space-y-8">
                   <div className="transition-all duration-500">
-                    <Link href="/client/john" className="block group/link">
+                    <Link href="/john" className="block group/link">
                       <div className="text-primary text-xl mb-1 group-hover/link:underline cursor-pointer font-medium">Testimony Ruth Wallace | Official Identity &amp; Professional Hub</div>
                       <div className="text-gray-400 text-xs mb-2">https://testimony.visiblx.com/</div>
                       <div className="text-gray-500 text-sm leading-relaxed">Claim your digital legacy with Visiblx. High-trust identity verification and professional curation for modern leaders. Get found on Google with a verified presence...</div>

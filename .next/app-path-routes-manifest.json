@@ -1,6 +1,11 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
-  "/client/[subdomain]/page": "/client/[subdomain]",
-  "/page": "/"
+  "/acme/page": "/acme",
+  "/bishop/page": "/bishop",
+  "/brighttech/page": "/brighttech",
+  "/david/page": "/david",
+  "/john/page": "/john",
+  "/page": "/",
+  "/rachel/page": "/rachel"
 }

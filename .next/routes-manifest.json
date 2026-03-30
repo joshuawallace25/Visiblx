@@ -21,16 +21,7 @@
     "afterFiles": [],
     "fallback": []
   },
-  "dynamicRoutes": [
-    {
-      "page": "/client/[subdomain]",
-      "regex": "^/client/([^/]+?)(?:/)?$",
-      "routeKeys": {
-        "nxtPsubdomain": "nxtPsubdomain"
-      },
-      "namedRegex": "^/client/(?<nxtPsubdomain>[^/]+?)(?:/)?$"
-    }
-  ],
+  "dynamicRoutes": [],
   "staticRoutes": [
     {
       "page": "/",
@@ -49,6 +40,42 @@
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/acme",
+      "regex": "^/acme(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/acme(?:/)?$"
+    },
+    {
+      "page": "/bishop",
+      "regex": "^/bishop(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/bishop(?:/)?$"
+    },
+    {
+      "page": "/brighttech",
+      "regex": "^/brighttech(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/brighttech(?:/)?$"
+    },
+    {
+      "page": "/david",
+      "regex": "^/david(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/david(?:/)?$"
+    },
+    {
+      "page": "/john",
+      "regex": "^/john(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/john(?:/)?$"
+    },
+    {
+      "page": "/rachel",
+      "regex": "^/rachel(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/rachel(?:/)?$"
     }
   ],
   "dataRoutes": [],

@@ -1,6 +1,0 @@
-{"timestamp":"00:00:06.214","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:06.587","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
-{"timestamp":"00:02:05.796","source":"Server","level":"ERROR","message":"Error: EPIPE: broken pipe, write"}
-{"timestamp":"00:02:05.811","source":"Server","level":"ERROR","message":"⨯ \"uncaughtException:\" Error: EPIPE: broken pipe, write"}
-{"timestamp":"00:02:05.827","source":"Server","level":"ERROR","message":"⨯ \"uncaughtException: \" Error: EPIPE: broken pipe, write"}
-{"timestamp":"00:02:06.388","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
