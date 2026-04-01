@@ -1,8 +1,5 @@
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Profile Not Found | Visiblx',
-};
 
 export default function NotFound() {
   return (

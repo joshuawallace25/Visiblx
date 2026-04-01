@@ -1,3 +1,0 @@
-module.exports=[37006,a=>{"use strict";var b=a.i(87924);a.s(["default",0,function({error:a,reset:c}){return(0,b.jsx)("html",{lang:"en",children:(0,b.jsxs)("body",{className:"min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 text-center",children:[(0,b.jsx)("h2",{className:"text-3xl font-bold mb-6",children:"Critical System Error"}),(0,b.jsx)("button",{onClick:()=>c(),className:"px-8 py-3 bg-white text-black rounded-full font-bold uppercase tracking-widest hover:bg-gray-200 transition-all",children:"Reset Application"})]})})}])}];
-
-//# sourceMappingURL=src_app_global-error_tsx_0ib21jc._.js.map
