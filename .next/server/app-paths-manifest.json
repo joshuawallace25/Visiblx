@@ -1,11 +1,5 @@
 {
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/acme/page": "app/acme/page.js",
-  "/bishop/page": "app/bishop/page.js",
-  "/brighttech/page": "app/brighttech/page.js",
-  "/david/page": "app/david/page.js",
-  "/john/page": "app/john/page.js",
-  "/page": "app/page.js",
-  "/rachel/page": "app/rachel/page.js"
+  "/page": "app/page.js"
 }

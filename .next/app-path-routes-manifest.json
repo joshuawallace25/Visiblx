@@ -1,11 +1,5 @@
 {
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
-  "/acme/page": "/acme",
-  "/bishop/page": "/bishop",
-  "/brighttech/page": "/brighttech",
-  "/david/page": "/david",
-  "/john/page": "/john",
-  "/page": "/",
-  "/rachel/page": "/rachel"
+  "/page": "/"
 }
