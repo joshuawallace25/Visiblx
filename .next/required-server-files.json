@@ -109,7 +109,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Rachel Gifty Jippy\\Desktop\\newproject\\Visiblx",
+    "outputFileTracingRoot": "C:\\Users\\Rachel Gifty Jippy\\Desktop\\newproject\\visiblx",
     "allowedDevOrigins": [
       "192.168.1.68"
     ],
@@ -312,11 +312,11 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "C:\\Users\\Rachel Gifty Jippy\\Desktop\\newproject\\Visiblx"
+      "root": "C:\\Users\\Rachel Gifty Jippy\\Desktop\\newproject\\visiblx"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "C:\\Users\\Rachel Gifty Jippy\\Desktop\\newproject\\Visiblx",
+  "appDir": "C:\\Users\\Rachel Gifty Jippy\\Desktop\\newproject\\visiblx",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
