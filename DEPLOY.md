@@ -1,33 +1,36 @@
-# Vercel Deployment Instructions
+# Vercel Deployment & Wildcard Subdomains
 
-Follow these exact steps to resolve the `404: NOT_FOUND` error and get your landing page live on Vercel.
+Follow these steps to get your **Tesla-inspired** identy platform live with full subdomain support (e.g., `rachel.visiblx.com`).
 
-## 1. Verify Vercel Project Settings
+## 1. Domain Configuration (DNS)
 
-To ensure Vercel can find your application, you **MUST** configure the Root Directory:
+You must point your domain and its subdomains to Vercel:
 
-1.  Open your project in the **Vercel Dashboard**.
-2.  Go to **Settings** -> **General**.
-3.  Scroll down to **Root Directory**.
-4.  Set the value to `Visiblx`.
-5.  Click **Save**.
+1.  **A Record**: Point `@` (or your root domain) to `76.76.21.21`.
+2.  **Wildcard CNAME**: Add a CNAME record for `*` pointing to `cname.vercel-dns.com`.
+    -   *Example*: Host: `*` | Value: `cname.vercel-dns.com`
 
-## 2. Redeploy
+## 2. Vercel Dashboard Settings
 
-After saving the Root Directory:
+1.  **Root Directory**: Ensure it is set to `Visiblx`.
+2.  **Domains**:
+    -   Add `visiblx.com` (your root domain).
+    -   Add `*.visiblx.com` (the wildcard domain).
+3.  **Environment Variables**:
+    -   `NEXT_PUBLIC_BASE_DOMAIN`: Set this to `visiblx.com` in production so the sitemap and metadata generate correctly.
 
-1.  Go to the **Deployments** tab.
-2.  Find your latest deployment.
-3.  Click the three dots `...` and select **Redeploy**.
-4.  Ensure **"Bypass Build Cache"** is checked.
+## 3. SEO & Crawling
 
-## 3. Verify Local Build
+-   **Sitemap**: Automatically generated at `visiblx.com/sitemap.xml`.
+-   **Robots**: Configured at `visiblx.com/robots.txt` to allow all bots.
+-   **Metadata**: Each client page automatically generates unique titles, descriptions, and canonical tags for Google.
 
-If you run into issues, confirm your local build still works:
+## 4. Verification
 
-1.  Open your terminal in the `Visiblx` directory.
-2.  Run `npm run build`.
-3.  If you see `✓ Generating static pages using 3 workers (3/3)`, your build is perfect.
+Once deployed, you can verify by visiting:
+-   `https://visiblx.com` (Main Landing)
+-   `https://rachel.visiblx.com` (Rachel's Identity Page)
+-   `https://bishop.visiblx.com` (Bishop's Identity Page)
 
 ## Summary of Fixes
 

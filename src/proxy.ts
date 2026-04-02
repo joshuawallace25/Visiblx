@@ -16,8 +16,6 @@ export const config = {
 
 export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone();
-  
-  // Get hostname of request (e.g. acme.visiblx.com)
   const hostname = request.headers.get('host');
 
   if (!hostname) return NextResponse.next();
@@ -25,26 +23,23 @@ export function proxy(request: NextRequest) {
   // Remove port if it exists (e.g. localhost:3000)
   const cleanHostname = hostname.replace(/:\d+$/, '');
   
-  // Extract subdomain assuming the base domain is visiblx.com
-  let subdomain = '';
+  // Base domain configuration
+  const baseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN || 'visiblx.com';
   
-  if (cleanHostname.endsWith('.visiblx.com')) {
-    subdomain = cleanHostname.replace('.visiblx.com', '');
+  let subdomain = '';
+  if (cleanHostname.endsWith(`.${baseDomain}`)) {
+    subdomain = cleanHostname.replace(`.${baseDomain}`, '');
   } else if (cleanHostname.endsWith('.localhost')) {
-    // Also keeping localhost support just in case it's needed in the future
     subdomain = cleanHostname.replace('.localhost', '');
   }
 
-  // Prevent routing 'www' to a client profile
-  if (subdomain === 'www') {
-    subdomain = '';
-  }
+  // Define excluded subdomains (like www)
+  const excludedSubdomains = ['www', 'app', 'api', 'admin'];
 
-  // If a valid subdomain is identified, dynamically rewrite the routing
-  if (subdomain && subdomain !== 'visiblx.com' && subdomain !== 'localhost') {
-    // We rewrite the URL to /client/[subdomain]/[current_path]
-    // So rachel.visiblx.com/about becomes internally /client/rachel/about
-    url.pathname = `/client/${subdomain}${url.pathname}`;
+  if (subdomain && !excludedSubdomains.includes(subdomain)) {
+    // Rewriting the URL to includes the subdomain in the path
+    // So rachel.visiblx.com/ becomes internally /rachel/
+    url.pathname = `/${subdomain}${url.pathname}`;
     return NextResponse.rewrite(url);
   }
 

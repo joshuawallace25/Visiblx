@@ -107,7 +107,7 @@ export default function HomePage() {
                     <div className="block">
                       <div className="text-primary text-xl mb-1 font-medium flex items-center gap-2">
                         Testimony Ruth Wallace | Official Identity &amp; Professional Hub
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-white/10 text-white font-bold uppercase tracking-widest border border-white/10">Coming Soon</span>
+
                       </div>
                       <div className="text-gray-400 text-xs mb-2">https://testimony.visiblx.com/</div>
                       <div className="text-gray-500 text-sm leading-relaxed">Claim your digital legacy with Visiblx. High-trust identity verification and professional curation for modern leaders. Get found on Google with a verified presence...</div>

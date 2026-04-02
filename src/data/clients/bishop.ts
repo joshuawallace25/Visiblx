@@ -6,7 +6,7 @@ export const client: ClientData = {
   title: "Bishop",
   bio: "Founder and general overseer of the Evangelical Ministering Group of Christ Freedom Land Ministries",
   location: "Liberia, Monrovia",
-  profileImage: "/bishop.jpg",
+  profileImage: "/proile.jpg", // Temporary fallback until bishop.jpg is uploaded
   services: ["Copywriting", "Content Strategy", "Brand Voice"],
   contact: {
     phone: "+231 886 93 9885",
