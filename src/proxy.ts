@@ -4,13 +4,14 @@ import type { NextRequest } from 'next/server';
 export const config = {
   matcher: [
     /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico, sitemap.xml, robots.txt (metadata files)
+     * Match all request paths except for:
+     * - api routes
+     * - static files (_next/static)
+     * - optimized images (_next/image)
+     * - specific metadata files (favicon, sitemap, robots)
+     * - any path containing a dot (indicating a file extension like .jpg, .png, etc.)
      */
-    '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\\..*).*)',
   ],
 };
 

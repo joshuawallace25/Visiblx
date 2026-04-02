@@ -9,7 +9,7 @@ export const client: ClientData = {
   profileImage: "/proile.jpg",
   services: ["Business Development", "Partner Engagement", "Workforce Strategy"],
   contact: {
-    phone: "+250 792 40 6540",
+    phone: "+250792406540",
     email: "racheljippy@gmail.com",
     whatsapp: "https://wa.me/250792406540"
   },
@@ -19,7 +19,7 @@ export const client: ClientData = {
   },
   theme: "forbes",
   seo: {
-    title: "Rachel Gifty Jippy | Official Profile",
+    title: "Rachel Gifty Jippy",
     description: "Official profile of Rachel Gifty Jippy, Co-founder and COO of Job Connect Rwanda. Industry leader and workforce development pioneer."
   },
   impactScore: "Industry Pioneer",

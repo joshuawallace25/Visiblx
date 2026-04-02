@@ -5,9 +5,9 @@ export const client: ClientData = {
   subdomain: "john",
   title: "Cloud Infrastructure Architect",
   bio: "John Doe is a renowned Cloud Infrastructure Architect specializing in scalable systems and distributed computing. With over a decade of experience, he has optimized digital backbones for Fortune 500 companies.",
-  location: "Newark, NJ / International",
+  location: "San Francisco, CA",
   profileImage: "/proile.jpg",
-  services: ["Industrial Engineering", "Supply Chain Logistics", "Global Innovation"],
+  services: ["Cloud Solutions", "System Architecture", "DevOps Strategy"],
   contact: {
     phone: "+1 (555) 012-3456",
     email: "john.doe@example.com",
