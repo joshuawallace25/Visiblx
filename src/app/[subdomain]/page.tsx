@@ -1,14 +1,18 @@
 import { notFound } from 'next/navigation';
-import { getClientBySubdomain } from '@/data/clients';
-import TeslaTemplate from '@/templates/TeslaTemplate';
-import MinimalTemplate from '@/templates/MinimalTemplate';
-import ProfessionalTemplate from '@/templates/ProfessionalTemplate';
+import { getClientBySubdomain, allClients } from '@/data/clients';
+import ForbesTemplate from '@/templates/ForbesTemplate';
 import { Metadata } from 'next';
 
 interface PageProps {
   params: Promise<{
     subdomain: string;
   }>;
+}
+
+export async function generateStaticParams() {
+  return allClients.map((client) => ({
+    subdomain: client.subdomain,
+  }));
 }
 
 export async function generateMetadata(
@@ -45,6 +49,7 @@ export async function generateMetadata(
           alt: client.name,
         },
       ],
+      locale: 'en_US',
       type: 'profile',
     },
     twitter: {
@@ -75,19 +80,30 @@ export default async function Page({ params }: PageProps) {
     notFound();
   }
 
-  // Render the appropriate template based on the client's theme choice
-  switch (client.theme) {
-    case 'minimal':
-      return <MinimalTemplate client={client} />;
-    case 'professional':
-      // The user previously had some clients using Tesla template 
-      // but the type only allows 'minimal' | 'professional'.
-      // If the client's subdomain matches those who want Tesla, we'll use that.
-      if (['rachel', 'bishop'].includes(client.subdomain)) {
-          return <TeslaTemplate client={client} />;
-      }
-      return <ProfessionalTemplate client={client} />;
-    default:
-      return <ProfessionalTemplate client={client} />;
-  }
+  // Schema.org Structured Data
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: client.name,
+    jobTitle: client.title,
+    description: client.bio,
+    image: client.profileImage,
+    url: `https://${subdomain}.visiblx.com`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: client.location,
+    },
+    knowsAbout: client.services,
+    sameAs: Object.values(client.socialLinks),
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ForbesTemplate client={client} />
+    </>
+  );
 }

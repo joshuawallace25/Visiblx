@@ -34,6 +34,7 @@
   --font-headline: var(--font-jakarta), sans-serif;
   --font-body: var(--font-jakarta), sans-serif;
   --font-label: var(--font-inter), sans-serif;
+  --font-serif: var(--font-playfair), serif;
 
   --radius-xl: 3rem;
 
@@ -100,4 +101,46 @@
   .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
   .reveal.active { opacity: 1; transform: translateY(0); }
   .typing-cursor::after { content: '|'; animation: blink-caret 0.75s step-end infinite; color: #e82127; }
+
+  /* Forbes Theme Utilities */
+  .forbes-title {
+    font-family: var(--font-playfair), serif;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+
+  .forbes-subtitle {
+    font-family: var(--font-playfair), serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+    color: #ed1c24;
+  }
+
+  .forbes-stat-label {
+    font-family: var(--font-inter), sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #757575;
+    font-weight: 700;
+  }
+
+  .forbes-stat-value {
+    font-family: var(--font-playfair), serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .forbes-border {
+    border: 1px solid #e0e0e0;
+  }
+
+  .forbes-divider {
+    height: 4px;
+    background: #121212;
+    width: 40px;
+    margin: 1.5rem 0;
+  }
 }

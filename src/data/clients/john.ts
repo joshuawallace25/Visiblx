@@ -3,23 +3,45 @@ import { ClientData } from "@/types/client";
 export const client: ClientData = {
   name: "John Doe",
   subdomain: "john",
-  title: "Senior Product Designer",
-  bio: "Specializing in minimal, fast, and accessible digital products. With over 10 years of experience shaping user interactions for global brands.",
-  location: "New York, USA",
-  profileImage: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=400&h=400&auto=format&fit=crop",
-  services: ["UI/UX Design", "Design Systems", "Prototyping"],
+  title: "Cloud Infrastructure Architect",
+  bio: "John Doe is a renowned Cloud Infrastructure Architect specializing in scalable systems and distributed computing. With over a decade of experience, he has optimized digital backbones for Fortune 500 companies.",
+  location: "Newark, NJ / International",
+  profileImage: "/proile.jpg",
+  services: ["Industrial Engineering", "Supply Chain Logistics", "Global Innovation"],
   contact: {
-    phone: "+1 (555) 123-4567",
+    phone: "+1 (555) 012-3456",
     email: "john.doe@example.com",
-    whatsapp: "https://wa.me/15551234567"
+    whatsapp: "https://wa.me/15550123456"
   },
   socialLinks: {
     linkedin: "https://linkedin.com/in/johndoe",
-    twitter: "https://twitter.com/johndoe"
+    twitter: "https://twitter.com/johndoe_tech"
   },
-  theme: "professional",
+  theme: "forbes",
   seo: {
-    title: "John Doe | Senior Product Designer",
-    description: "Official digital identity of John Doe. Discover design portfolio, skills, and contact information."
-  }
+    title: "John Doe | Official Infrastructure Hub",
+    description: "Official profile of John Doe, Cloud Architect and Infrastructure Specialist. Shaping the future of scalable computing."
+  },
+  impactScore: "Cloud Pioneer",
+  ranking: "#5 Most Influential Cloud Architects 2024",
+  currentRole: "Lead Architect",
+  age: 35,
+  residence: "San Francisco, USA",
+  citizenship: "USA",
+  education: "MSc Computer Science, MIT",
+  didYouKnow: [
+    "Published author on Microservices architecture.",
+    "Certified Kubernetes Administrator & AWS Global Champion.",
+    "Keynote speaker at CloudWorld 2023."
+  ],
+  quotes: [
+    "Scalability is not a goal; it's a foundation for survival in the digital age.",
+    "True innovation lies in making complex systems feel simple."
+  ],
+  about: "John Doe is a final year PhD candidate focusing on decentralized systems. He has spent his career bridging the gap between legacy hardware and modern cloud-native environments. His work has saved enterprises millions in infrastructure overhead.",
+  achievements: [
+    { title: "Architect of the Year", year: "2023", description: "Awarded by the Global Tech Council for infrastructure excellence." },
+    { title: "Kubernetes Catalyst", year: "2021", description: "Recognized for contributions to the open-source community." }
+  ],
+  verifiedBy: ["Visiblx Verified", "Cloud Architect Council"]
 };
