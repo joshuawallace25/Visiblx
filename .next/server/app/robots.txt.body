@@ -1,0 +1,22 @@
+User-Agent: *
+User-Agent: Googlebot
+User-Agent: Bingbot
+User-Agent: Slurp
+User-Agent: DuckDuckBot
+User-Agent: Baiduspider
+User-Agent: YandexBot
+Allow: /
+
+User-Agent: GPTBot
+User-Agent: ChatGPT-User
+User-Agent: CCBot
+User-Agent: Google-Extended
+User-Agent: OAI-SearchBot
+User-Agent: Anthropic-ai
+User-Agent: Claude-Web
+User-Agent: ClaudeBot
+User-Agent: PerplexityBot
+User-Agent: YouBot
+Allow: /
+
+Sitemap: https://visiblx.com/sitemap.xml

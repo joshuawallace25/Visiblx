@@ -25,7 +25,7 @@ export const client: ClientData = {
   },
   theme: "forbes",
   seo: {
-    title: "Bishop G Lawrence WWallace",
+    title: "Bishop G Lawrence W Wallace",
     description: "Bishop G. Lawrence W. Wallace is a Prophet, Founder and General Overseer of the Evangelical Ministering Group of Christ Freedom Land Ministries, dedicated to proclaiming the message of freedom in Christ and raising spiritually empowered believers worldwide."
   },
  impactScore: "Bishop & Prophetic Leader",

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/[subdomain]/layout,_N_T_/[subdomain]/page,_N_T_/acme"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/$d$subdomain/__PAGE__",
+    "/$d$subdomain",
+    "/_index",
+    "/_head"
+  ]
+}
