@@ -21,10 +21,22 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Visiblx | Visibility Made Simple',
-  description: 'Visiblx is a platform that helps individuals and businesses get found on Google with simple, professional pages. ',
+  title: {
+    template: '%s | Visiblx',
+    default: 'Visiblx | Visibility Made Simple',
+  },
+  description: 'Visiblx is a platform that helps individuals and businesses get found on Google with sleek, professional identity pages.',
+  metadataBase: new URL('https://visiblx.com'),
   icons: {
-    icon: '/logo.jpeg',
+    icon: [
+      { url: '/logo.jpeg' },
+      { url: '/logo.jpeg', sizes: '32x32', type: 'image/jpeg' },
+      { url: '/logo.jpeg', sizes: '16x16', type: 'image/jpeg' },
+    ],
+    apple: [
+      { url: '/logo.jpeg', sizes: '180x180', type: 'image/jpeg' },
+    ],
+    shortcut: ['/logo.jpeg'],
   },
 };
 

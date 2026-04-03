@@ -69,6 +69,11 @@ export async function generateMetadata(
         'max-snippet': -1,
       },
     },
+    icons: {
+      icon: '/logo.jpeg',
+      apple: '/logo.jpeg',
+      shortcut: '/logo.jpeg',
+    },
   };
 }
 
@@ -87,7 +92,7 @@ export default async function Page({ params }: PageProps) {
     name: client.name,
     jobTitle: client.title,
     description: client.bio,
-    image: client.profileImage,
+    image: `https://${subdomain}.visiblx.com${client.profileImage}`,
     url: `https://${subdomain}.visiblx.com`,
     address: {
       '@type': 'PostalAddress',
@@ -95,6 +100,20 @@ export default async function Page({ params }: PageProps) {
     },
     knowsAbout: client.services,
     sameAs: Object.values(client.socialLinks),
+    alumniOf: client.education ? {
+      '@type': 'EducationalOrganization',
+      name: client.education
+    } : undefined,
+    worksFor: client.currentRole ? {
+      '@type': 'Organization',
+      name: 'Independent' // Or a specific company if we split the field later
+    } : undefined,
+    award: client.achievements?.map(a => `${a.title} (${a.year})`),
+    memberOf: client.verifiedBy?.map(org => ({
+      '@type': 'Organization',
+      name: org
+    })),
+    quotation: client.quotes?.[0], // Focus on the primary quote
   };
 
   return (

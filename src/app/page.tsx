@@ -28,6 +28,38 @@ export default function HomePage() {
 
   return (
     <>
+      {/* Search Engine Optimization: Organization & WebSite Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              'name': 'Visiblx',
+              'url': 'https://visiblx.com',
+              'logo': 'https://visiblx.com/logo.jpeg',
+              'foundingDate': '2026',
+              'description': 'Visiblx is a premium identity and visibility platform helping professionals and businesses own their digital narrative.',
+              'sameAs': [
+                'https://linkedin.com/company/visiblx',
+                'https://twitter.com/visiblx'
+              ]
+            },
+            {
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              'name': 'Visiblx',
+              'url': 'https://visiblx.com',
+              'potentialAction': {
+                '@type': 'SearchAction',
+                'target': 'https://visiblx.com/search?q={search_term_string}',
+                'query-input': 'required name=search_term_string'
+              }
+            }
+          ])
+        }}
+      />
       {/* TopNavBar */}
       <header className="sticky top-0 w-full z-50 bg-black/80 backdrop-blur-2xl border-b border-white/10">
         <div className="flex items-center justify-between px-10 py-5 max-w-[1440px] mx-auto">

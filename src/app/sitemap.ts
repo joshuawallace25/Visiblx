@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
+      changeFrequency: 'daily' as const,
       priority: 1.0,
     },
   ];
@@ -19,8 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const clientSites = allClients.map((client) => ({
     url: `https://${client.subdomain}.${baseDomain}`,
     lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
+    changeFrequency: 'daily' as const,
+    priority: 1.0,
   }));
 
   return [...mainSite, ...clientSites];
