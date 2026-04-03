@@ -323,7 +323,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="flex items-baseline gap-2 mb-10">
-                  <span className="text-6xl font-black">$15</span>
+                  <span className="text-6xl font-black">$6</span>
                   <span className="text-on-surface-variant text-xl">/year</span>
                 </div>
                 <ul className="space-y-5 mb-12">
@@ -364,7 +364,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="flex items-baseline gap-2 mb-10">
-                  <span className="text-6xl font-black">$25</span>
+                  <span className="text-6xl font-black">$13</span>
                   <span className="text-on-surface-variant text-xl">/year</span>
                 </div>
                 <ul className="space-y-5 mb-12">
