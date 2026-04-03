@@ -39,10 +39,10 @@ export const client: ClientData = {
   currentRole: "Founder & Presiding Bishop",
 
   age: 0,
-  residence: "Paynesville, Montserrado, Liberia",
+  residence: "Paynesville, Liberia",
   citizenship: "Liberian",
 
-  education: "Theological training from Word of Faith Bible Institute (WOFBI), (Olulu University), and graduate of Vision International University (Liberia Campus)",
+  education: "MSc in Theology",
 
   didYouKnow: [
     "Is widely referred to as 'The End Time Prophet' due to his strong prophetic ministry.",
