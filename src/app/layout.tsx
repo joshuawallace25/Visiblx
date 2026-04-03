@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s',
     default: 'Visiblx | Visibility Made Simple',
   },
-  description: 'Visiblx is a platform that helps individuals and businesses get found on Google with sleek, professional identity pages.',
+  description: 'Visiblx is a platform that helps individuals and businesses get found on Google with simple, professional identity pages.',
   metadataBase: new URL('https://visiblx.com'),
   icons: {
     icon: [

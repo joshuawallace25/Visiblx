@@ -40,7 +40,7 @@ export default function HomePage() {
               'url': 'https://visiblx.com',
               'logo': 'https://visiblx.com/logo.jpeg',
               'foundingDate': '2026',
-              'description': 'Visiblx is a premium identity and visibility platform helping professionals and businesses own their digital narrative.',
+              'description': 'Visiblx is a platform that helps individuals and businesses get found on Google with simple, professional identity pages',
               'sameAs': [
                 'https://linkedin.com/company/visiblx',
                 'https://twitter.com/visiblx'
