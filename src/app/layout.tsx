@@ -22,7 +22,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Visiblx',
+    template: '%s',
     default: 'Visiblx | Visibility Made Simple',
   },
   description: 'Visiblx is a platform that helps individuals and businesses get found on Google with sleek, professional identity pages.',
