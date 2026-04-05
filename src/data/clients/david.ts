@@ -18,6 +18,7 @@ export const client: ClientData = {
     linkedin: "https://linkedin.com/in/davidchen"
   },
   theme: "forbes",
+  type: "Person",
   seo: {
     title: "David Chen | The Global Investor",
     description: "Official profile of David Chen, Venture Capitalist and Founder of Chen Global Fund. Building the future of fintech."

@@ -18,6 +18,7 @@ export const client: ClientData = {
     twitter: "https://twitter.com/brighttech_ai"
   },
   theme: "forbes",
+  type: "Organization",
   seo: {
     title: "BrightTech | The AI Revolution",
     description: "Official identity of BrightTech Solutions. Redefining industry standards through advanced AI and cloud intelligence."

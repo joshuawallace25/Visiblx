@@ -33,6 +33,7 @@ export async function generateMetadata(
   return {
     title: client.seo.title,
     description: client.seo.description,
+    keywords: [client.name, client.title, ...client.services, 'Visiblx', 'Identity'],
     alternates: {
       canonical: canonicalUrl,
     },
@@ -44,13 +45,13 @@ export async function generateMetadata(
       images: [
         {
           url: client.profileImage,
-          width: 800,
-          height: 600,
+          width: 1200,
+          height: 630,
           alt: client.name,
         },
       ],
       locale: 'en_US',
-      type: 'profile',
+      type: client.type === 'Person' ? 'profile' : 'website',
     },
     twitter: {
       card: 'summary_large_image',
@@ -69,11 +70,6 @@ export async function generateMetadata(
         'max-snippet': -1,
       },
     },
-    icons: {
-      icon: '/logo.jpeg',
-      apple: '/logo.jpeg',
-      shortcut: '/logo.jpeg',
-    },
   };
 }
 
@@ -85,15 +81,18 @@ export default async function Page({ params }: PageProps) {
     notFound();
   }
 
+  const domain = process.env.NEXT_PUBLIC_DOMAIN || 'visiblx.com';
+  const fullUrl = `https://${subdomain}.${domain}`;
+
   // Schema.org Structured Data
-  const jsonLd = {
+  const jsonLd = client.type === 'Person' ? {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: client.name,
     jobTitle: client.title,
     description: client.bio,
-    image: `https://${subdomain}.visiblx.com${client.profileImage}`,
-    url: `https://${subdomain}.visiblx.com`,
+    image: `${fullUrl}${client.profileImage}`,
+    url: fullUrl,
     address: {
       '@type': 'PostalAddress',
       addressLocality: client.location,
@@ -106,14 +105,24 @@ export default async function Page({ params }: PageProps) {
     } : undefined,
     worksFor: client.currentRole ? {
       '@type': 'Organization',
-      name: 'Independent' // Or a specific company if we split the field later
+      name: 'Independent'
     } : undefined,
     award: client.achievements?.map(a => `${a.title} (${a.year})`),
-    memberOf: client.verifiedBy?.map(org => ({
-      '@type': 'Organization',
-      name: org
-    })),
-    quotation: client.quotes?.[0], // Focus on the primary quote
+  } : {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: client.name,
+    description: client.bio,
+    url: fullUrl,
+    logo: `${fullUrl}${client.profileImage}`,
+    image: `${fullUrl}${client.profileImage}`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: client.location,
+    },
+    knowsAbout: client.services,
+    sameAs: Object.values(client.socialLinks),
+    award: client.achievements?.map(a => `${a.title} (${a.year})`),
   };
 
   return (

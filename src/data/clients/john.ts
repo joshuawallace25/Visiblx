@@ -18,6 +18,7 @@ export const client: ClientData = {
     twitter: "https://twitter.com/johndoe_tech"
   },
   theme: "forbes",
+  type: "Person",
   seo: {
     title: "John Doe | Official Infrastructure Hub",
     description: "Official profile of John Doe, Cloud Architect and Infrastructure Specialist. Shaping the future of scalable computing."

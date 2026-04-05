@@ -1,10 +1,13 @@
 User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
 User-Agent: Googlebot
 User-Agent: Bingbot
-User-Agent: Slurp
+User-Agent: Applebot
 User-Agent: DuckDuckBot
-User-Agent: Baiduspider
-User-Agent: YandexBot
 Allow: /
 
 User-Agent: GPTBot

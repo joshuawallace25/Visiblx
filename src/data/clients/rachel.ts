@@ -18,6 +18,7 @@ export const client: ClientData = {
     linkedin: "https://linkedin.com/in/rachelgifty"
   },
   theme: "forbes",
+  type: "Person",
   seo: {
     title: "Rachel Gifty Jippy",
     description: "Official profile of Rachel Gifty Jippy, Co-founder and COO of Job Connect Rwanda. Industry leader and workforce development pioneer."

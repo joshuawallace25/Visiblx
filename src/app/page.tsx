@@ -37,20 +37,29 @@ export default function HomePage() {
               '@context': 'https://schema.org',
               '@type': 'Organization',
               'name': 'Visiblx',
+              'alternateName': 'Visiblx ',
               'url': 'https://visiblx.com',
               'logo': 'https://visiblx.com/logo.jpeg',
               'foundingDate': '2026',
-              'description': 'Visiblx is a platform that helps individuals and businesses get found on Google with simple, professional identity pages',
+              'description': 'Visiblx is a platform that helps individuals and businesses get found on Google with simple, professional pages.',
               'sameAs': [
                 'https://linkedin.com/company/visiblx',
-                'https://twitter.com/visiblx'
-              ]
+                'https://twitter.com/visiblx',
+                'https://instagram.com/visiblx'
+              ],
+              'contactPoint': {
+                '@type': 'ContactPoint',
+                'contactType': 'customer support',
+                'email': 'visiblx.info@gmail.com',
+                'url': 'https://visiblx.com/contact'
+              }
             },
             {
               '@context': 'https://schema.org',
               '@type': 'WebSite',
               'name': 'Visiblx',
               'url': 'https://visiblx.com',
+              'description': 'Visiblx is a platform that helps individuals and businesses get found on Google with simple, professional pages. ',
               'potentialAction': {
                 '@type': 'SearchAction',
                 'target': 'https://visiblx.com/search?q={search_term_string}',
@@ -74,9 +83,9 @@ export default function HomePage() {
             <Link className="text-gray-400 hover:text-white transition-all duration-300" href="/">About</Link>
           </nav>
           <div className="flex items-center gap-6">
-            <button className="active:scale-95 transform transition-all px-6 py-2.5 rounded-full bg-white text-black font-bold text-sm hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-              Get Started
-            </button>
+            <a href="mailto:visiblx.info@gmail.com" className="active:scale-95 transform transition-all px-6 py-2.5 rounded-full bg-white text-black font-bold text-sm hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+              Contact to Join
+            </a>
             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 z-50 relative outline-none focus:outline-none">
               <span className={`w-6 h-[2px] bg-white transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-[8px]' : ''}`}></span>
               <span className={`w-6 h-[2px] bg-white transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
@@ -272,7 +281,7 @@ export default function HomePage() {
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Own Your Legend in Three Steps</h2>
               <p className="text-on-surface-variant">Professionalism simplified for the digital age.</p>
             </div>
-            <div className="relative flex flex-col md:flex-row justify-between gap-10 md:gap-8 items-start">
+            <div className="relative flex flex-col md:flex-row justify-between gap-10 md:gap-8 items-center md:items-start">
               <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-outline-variant/20 to-transparent z-[0]"></div>
               
               <div className="flex-1 flex flex-col items-center group relative z-10">
@@ -344,9 +353,9 @@ export default function HomePage() {
                     <span>Executive Identity Shield</span>
                   </li>
                 </ul>
-                <button className="w-full py-5 rounded-2xl border-2 border-primary/30 font-bold hover:bg-primary hover:text-on-primary hover:shadow-[0_0_30px_rgba(193,128,255,0.4)] transition-all duration-300 transform active:scale-[0.98]">
-                  Start Your Journey
-                </button>
+                <a href="mailto:visiblx.info@gmail.com" className="w-full inline-block text-center py-5 rounded-2xl border-2 border-primary/30 font-bold hover:bg-primary hover:text-on-primary hover:shadow-[0_0_30px_rgba(193,128,255,0.4)] transition-all duration-300 transform active:scale-[0.98]">
+                  Contact via Email
+                </a>
               </div>
 
               <div className="glass-high p-8 md:p-10 rounded-3xl border-white/20 hover:border-white/50 transition-all duration-500 relative overflow-hidden group shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)]">
@@ -385,9 +394,9 @@ export default function HomePage() {
                     <span>Priority Indexing Support</span>
                   </li>
                 </ul>
-                <button className="w-full py-5 rounded-2xl bg-secondary text-on-secondary font-bold hover:shadow-[0_0_40px_rgba(195,192,255,0.5)] transition-all duration-300 transform active:scale-[0.98]">
-                  Empower Your Team
-                </button>
+                <a href="https://wa.me/250798653557" target="_blank" rel="noopener noreferrer" className="w-full inline-block text-center py-5 rounded-2xl bg-secondary text-on-secondary font-bold hover:shadow-[0_0_40px_rgba(195,192,255,0.5)] transition-all duration-300 transform active:scale-[0.98]">
+                  Chat on WhatsApp
+                </a>
               </div>
             </div>
           </div>
@@ -399,11 +408,18 @@ export default function HomePage() {
             <div className="glass-high p-10 md:p-16 rounded-[2.5rem] md:rounded-[3rem] text-center relative overflow-hidden border-white/20 shadow-[0_0_100px_rgba(255,255,255,0.02)]">
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 -z-[1]"></div>
               <h2 className="text-4xl md:text-6xl font-black mb-6 md:mb-8 leading-tight tracking-tighter text-balance mx-auto">Don't leave your <br className="hidden md:block"/> reputation to chance.</h2>
-              <p className="text-on-surface-variant text-base md:text-lg mb-10 md:mb-12 max-w-xl mx-auto leading-relaxed">Join 15,000+ professionals who have already claimed their digital destiny with Visiblx.</p>
-              <button className="group relative px-10 py-5 bg-white text-black rounded-full font-bold text-lg md:text-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_15px_40px_rgba(255,255,255,0.1)] border border-transparent hover:border-white">
-                <span className="relative z-10">Claim Your Identity Now</span>
-                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-              </button>
+              <p className="text-on-surface-variant text-base md:text-lg mb-10 md:mb-12 max-w-xl mx-auto leading-relaxed">
+                Platform access is currently by invitation and manual onboarding only. Contact our team to claim your digital destiny.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="mailto:visiblx.info@gmail.com" className="group relative px-10 py-5 bg-white text-black rounded-full font-bold text-lg md:text-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_15px_40px_rgba(255,255,255,0.1)] border border-transparent hover:border-white">
+                  <span className="relative z-10">Email Us</span>
+                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                </a>
+                <a href="tel:+250798653557" className="group relative px-10 py-5 bg-black/40 backdrop-blur-xl text-white rounded-full font-bold text-lg md:text-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_15px_40px_rgba(0,0,0,0.1)] border border-white/20 hover:border-white/50">
+                  <span className="relative z-10">+250 798 653 557</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>

@@ -6,12 +6,17 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        // General Search Engines
-        userAgent: ['*', 'Googlebot', 'Bingbot', 'Slurp', 'DuckDuckBot', 'Baiduspider', 'YandexBot'],
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/api/', '/_next/', '/static/'],
+      },
+      {
+        // Explicitly allow high-value bots to prioritize indexing
+        userAgent: ['Googlebot', 'Bingbot', 'Applebot', 'DuckDuckBot'],
         allow: '/',
       },
       {
-        // AI Crawlers and GPTs
+        // Allow AI agents to crawl for visibility in AI search results
         userAgent: [
           'GPTBot', 
           'ChatGPT-User', 

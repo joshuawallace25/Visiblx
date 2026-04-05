@@ -18,6 +18,7 @@ export const client: ClientData = {
     twitter: "https://twitter.com/acmeofficial"
   },
   theme: "forbes",
+  type: "Organization",
   seo: {
     title: "Acme Corp | Official Enterprise Identity",
     description: "The official platform for Acme Corp. Discover our legacy, global impact, and industrial solutions."

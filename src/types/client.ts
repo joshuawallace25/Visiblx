@@ -13,6 +13,7 @@ export interface ClientData {
   };
   socialLinks: Record<string, string>;
   theme: "minimal" | "professional" | "forbes" | "tesla";
+  type: "Person" | "Organization";
   seo: {
     title: string;
     description: string;

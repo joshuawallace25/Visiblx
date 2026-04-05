@@ -28,7 +28,7 @@ export const client: ClientData = {
   },
 
   theme: "forbes",
-
+  type: "Person",
   seo: {
     title: "Bishop G. Lawrence W. Wallace",
     description: "Bishop G. Lawrence W. Wallace is a prominent Liberian preacher, prophet, and founder of Evangelical Ministering Group of Christ (Freedom Land Ministries), known for his prophetic ministry and leadership."
